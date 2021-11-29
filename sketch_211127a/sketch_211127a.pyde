@@ -6,11 +6,11 @@ currentscreen = 'Startmenu'
 def setup():
     fullScreen()
     
-    global img_cursor
-    img_cursor = loadImage('cursor.png')
-    
     global img_bg
-    img_bg = loadImage('Background78.jpeg')
+    img_bg = loadImage('background.png')
+    
+    global img_log
+    img_log = loadImage('logo.png')
     
     global font_kabel
     font_kabel = loadFont('LeelawadeeUI-Bold-48.vlw')
@@ -22,17 +22,27 @@ def setup():
     img_bl = loadImage('Black.jpg')
     
 def drawStartmenu():
-    image(img_bg, 0, 0, width, height)
+    image(img_bg, 0, 0)
+    
+    image(img_log, 400, 100, 1784, 558.5)
+    
+    image(img_round, 880, 840, 406, 162.4)
+    
+    image(img_round, 1400, 840, 406, 162.4)
+    
+    image(img_round, 1400, 1100, 406, 162.4)
+    
+    image(img_round, 880, 1100, 406, 162.4)
+    
+    textFont(font_kabel)
+    fill('#1dc2ce')
+    textSize(75)
+    text("Play", 995, 940)
     
     textFont(font_kabel)
     fill('#1dc2ce')
     textSize(67)
-    text("Play", 960, 950)
-    
-    textFont(font_kabel)
-    fill('#1dc2ce')
-    textSize(60)
-    text("Settings", 1425, 950)
+    text("Settings", 1473, 939)
     
     textFont(font_kabel)
     fill('#1dc2ce')
